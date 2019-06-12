@@ -15,6 +15,7 @@ class CreateHeadingsTable extends Migration
     {
         Schema::create('headings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
             $table->timestamps();
         });
     }
