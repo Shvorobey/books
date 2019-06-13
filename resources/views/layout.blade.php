@@ -35,16 +35,17 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#FFB6C1" href="{{route('about')}}">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#FFB6C1" href="{{route('contact')}}">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#FFB6C1" href="{{route('locator')}}">Мы на карте</a>
+                </li>
 {{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" style="color:#FFB6C1" href="{{route('about')}}">О нас</a>--}}
-{{--                </li>--}}
-
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" style="color:#FFB6C1" href="{{route('contact')}}">Контакты</a>--}}
-{{--                </li>--}}
-
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" style="color:#FFB6C1" href="{{route('summator')}}">Сумматор</a>--}}
+{{--                    <a class="nav-link" style="color:#FFB6C1" href="{{route('summator')}}">Войти</a>--}}
 {{--                </li>--}}
             </ul>
         </div>

@@ -18,3 +18,9 @@ Route::get('/autor/{key}','\\' . \App\Http\Controllers\BooksByAutorController::c
 Route::get('/heading/{key}','\\' . \App\Http\Controllers\BooksByHeadingController::class)->name('books_by_heading');
 
 Route::get('/single_book/{id}','\\' . \App\Http\Controllers\SingleBookController::class)->name('single_book');
+
+Route::get('/about', 'ShowPagesController@about')->name('about');
+
+Route::get('/contact', 'ShowPagesController@contact')->name('contact');
+
+Route::get('/locator', function () { return view('locator');})->name('locator');
