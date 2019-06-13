@@ -16,3 +16,5 @@ Route::get('/','\\' . \App\Http\Controllers\IndexController::class)->name('main'
 Route::get('/autor/{key}','\\' . \App\Http\Controllers\BooksByAutorController::class)->name('books_by_autor');
 
 Route::get('/heading/{key}','\\' . \App\Http\Controllers\BooksByHeadingController::class)->name('books_by_heading');
+
+Route::get('/single_book/{id}','\\' . \App\Http\Controllers\SingleBookController::class)->name('single_book');

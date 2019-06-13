@@ -1,17 +1,15 @@
 @extends ('layout')
 
-@section('title', 'Книги рубрики')
+@section('title', 'Книга')
 @section('content')
     <div class="col-md-8">
-        <h1 class="my-4" style="color:#800080">Все книги рубрики <u style="color:#ff0000"> {{$heading->title}} </u>
-        </h1>
-    @foreach( $heading->books as $book)
+        <h1 class="my-4" style="color:#0000CD">{{$book->title}}</h1>
         <!-- Blog Post -->
             <div class="card mb-4">
                 <img class="card-img-top" src="{{$book->img}}" alt="Card image cap">
                 <div class="card-body">
-                    <h2 class="card-title" style="color:#006400">{{$book->title}}</h2>
-                    <a href="{{route('single_book', $book->id)}}" class="btn btn-primary">Подробнее о книге &rarr;</a>
+                    <h2 class="card-title" style="color:#ff0000">{{$book->title}}</h2>
+                    <a href="#" class="btn btn-primary">Подробнее о книге &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">
                     Создан: {{$book->created_at}}  <br>
@@ -25,9 +23,7 @@
                     @endforeach
                 </div>
             </div>
-    @endforeach
     </div>
-
 @endsection
 
 @section ('headings')
@@ -72,7 +68,7 @@
     <!-- Advertising Widget -->
     <div class="card my-4">
         <h5 class="card-header">Рекламный блок</h5>
-        <div class="card-body" >
+        <div class="card-body">
             <strong style="color:#ff0000"> Покупайте наших слонов </strong>
         </div>
     </div>

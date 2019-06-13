@@ -11,7 +11,7 @@
                 <img class="card-img-top" src="{{$book->img}}" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="card-title" style="color:#ff0000">{{$book->title}}</h2>
-                    <a href="#" class="btn btn-primary">Подробнее о книге &rarr;</a>
+                    <a href="{{route('single_book', $book->id)}}" class="btn btn-primary">Подробнее о книге &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">
                     Создан: {{$book->created_at}}  <br>
