@@ -44,9 +44,10 @@
                 <li class="nav-item">
                     <a class="nav-link" style="color:#FFB6C1" href="{{route('locator')}}">Мы на карте</a>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" style="color:#FFB6C1" href="{{route('summator')}}">Войти</a>--}}
-{{--                </li>--}}
+                <li class="nav-item">
+                    <a class="nav-link" style="color:mediumvioletred" href="  {{route('admin')}}">@if (\Auth::check ()){{\Auth::user()->name}}
+                                @else Вход @endif</a>
+                </li>
             </ul>
         </div>
     </div>

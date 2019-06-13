@@ -24,3 +24,8 @@ Route::get('/about', 'ShowPagesController@about')->name('about');
 Route::get('/contact', 'ShowPagesController@contact')->name('contact');
 
 Route::get('/locator', function () { return view('locator');})->name('locator');
+
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index')->name('admin');
+//Route::get('/home', 'HomeController@index')->name('home');
