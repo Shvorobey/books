@@ -3,12 +3,7 @@
 
 <form action="" method="post" enctype="multipart/form-data">
     @csrf
-{{--    <strong> Раздел: </strong> <br>--}}
-{{--    @foreach($headings as $heading)--}}
-{{--        <input type="radio" name="heading_id" value="{{$heading->id}}"--}}
-{{--               @if ($heading->id==old('headings')) checked="checked" @endif> {{$heading->title}} <br>--}}
-{{--    @endforeach--}}
-{{--    <hr>--}}
+
     <strong>Имя:</strong> <br>
     <input type="text" name="first_name" placeholder="Не более 30 символов" value="{{old ('first_name')}}"/><br>
     @if ($errors->any('first_name'))

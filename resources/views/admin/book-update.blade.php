@@ -2,7 +2,7 @@
 <p><a href="{{route('main')}}">На главную </a>
 
 <form action="" method="post" enctype="multipart/form-data">
-@csrf
+    @csrf
 
     <strong>Название книги:</strong> <br>
     <input type="text" name="title" placeholder="Не более 100 символов"

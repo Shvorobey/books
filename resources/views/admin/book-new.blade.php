@@ -5,7 +5,7 @@
     @csrf
 
     <strong>Название книги:</strong> <br>
-    <input type="text" name="title" placeholder="Не более 150 символов" value="{{old ('title')}}"/><br>
+    <input type="text" name="title" placeholder="Не более 100 символов" value="{{old ('title')}}"/><br>
     @if ($errors->any('title'))
         <div class="alert alert-danger">
             <ul>

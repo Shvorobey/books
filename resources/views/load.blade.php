@@ -43,9 +43,9 @@
 
 <script type="text/javascript">
 
-    window.onload = function() {
+    window.onload = function () {
 
-        setTimeout(function() {
+        setTimeout(function () {
 
             document.getElementById("preloader_malc").style.display = "none";
 

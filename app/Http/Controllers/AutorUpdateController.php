@@ -19,7 +19,7 @@ class AutorUpdateController extends Controller
             $this->validate($request, [
                 'first_name' => 'required | max: 30 | string ',
                 'last_name' => 'required | max: 30 | min: 2| string',
-                'key'=> 'required | max: 50 | min: 2| string'
+                'key'=> 'required | max: 30 | min: 2| string'
             ]);
 
             $autor = Autor::find($request->input('id'));
@@ -29,8 +29,7 @@ class AutorUpdateController extends Controller
 
             $autor->save();
 
-        } else
-        {
+        } else {
             $autor = Autor::find($request->get('id'));
         }
         return view('admin.autor-update', ['autor' => $autor]);

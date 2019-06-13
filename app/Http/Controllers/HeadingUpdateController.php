@@ -10,7 +10,7 @@ class HeadingUpdateController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
@@ -18,7 +18,7 @@ class HeadingUpdateController extends Controller
         if ($request->method() == 'POST') {
             $this->validate($request, [
                 'title' => 'required | max: 30 | string ',
-                'key'=> 'required | max: 50 | min: 2| string'
+                'key' => 'required | max: 30 | min: 2| string'
             ]);
 
             $heading = Heading::find($request->input('id'));
@@ -27,8 +27,7 @@ class HeadingUpdateController extends Controller
 
             $heading->save();
 
-        } else
-        {
+        } else {
             $heading = Heading::find($request->get('id'));
         }
         return view('admin.heading-update', ['heading' => $heading]);

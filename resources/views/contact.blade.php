@@ -3,10 +3,11 @@
 @section('title', 'Books - Контакты')
 
 @section('content')
-    <h1 class="my-4">О нас <br> <hr>
+    <h1 class="my-4">О нас <br>
+        <hr>
 
         @if (isset($page))
-           <small>{!! $page->text !!}</small>
+            <small>{!! $page->text !!}</small>
         @else
             <p>Мы работаем над нашим описанием</p>
         @endif

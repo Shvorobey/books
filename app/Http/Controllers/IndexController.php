@@ -8,6 +8,6 @@ class IndexController extends Controller
 {
     public function __invoke(Request $request)
     {
-        return view('index', ['books' => \App\Book::paginate (5)]);
+        return view('index', ['books' => \App\Book::paginate(5)]);
     }
 }

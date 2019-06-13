@@ -25,7 +25,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" style="color:#00FFFF" href="{{route('main')}}">Books</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -45,8 +46,9 @@
                     <a class="nav-link" style="color:#FFB6C1" href="{{route('locator')}}">Мы на карте</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color:mediumvioletred" href="  {{route('admin')}}">@if (\Auth::check ()){{\Auth::user()->name}}
-                                @else Вход @endif</a>
+                    <a class="nav-link" style="color:mediumvioletred"
+                       href="  {{route('admin')}}">@if (\Auth::check ()){{\Auth::user()->name}}
+                        @else Вход @endif</a>
                 </li>
             </ul>
         </div>
@@ -61,11 +63,11 @@
         <!-- Blog Entries Column -->
 
 
-            @yield('content')
+    @yield('content')
 
 
 
-        <!-- Sidebar Widgets Column -->
+    <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
 
             @yield('headings')
@@ -84,16 +86,16 @@
 
 <!-- Footer -->
 
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Alexandr Shvorobey 2019</p>
-        </div>
-        <!-- /.container -->
-    </footer>
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Alexandr Shvorobey 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
 </body>

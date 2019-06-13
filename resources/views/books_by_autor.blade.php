@@ -3,7 +3,8 @@
 @section('title', 'Книги автора')
 @section('content')
     <div class="col-md-8">
-        <h1 class="my-4" style="color:#0000CD">Все книги автора <u style="color:#006400">{{$autor->first_name}} {{$autor->last_name}}</u> </h1>
+        <h1 class="my-4" style="color:#0000CD">Все книги автора <u
+                    style="color:#006400">{{$autor->first_name}} {{$autor->last_name}}</u></h1>
 
     @foreach( $autor->books as $book)
         <!-- Blog Post -->
@@ -14,10 +15,11 @@
                     <a href="{{route('single_book', $book->id)}}" class="btn btn-primary">Подробнее о книге &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">
-                    Создан: {{$book->created_at}}  <br>
+                    Создан: {{$book->created_at}} <br>
                     Автор:
                     @foreach($book->autors as $autor)
-                        <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a><br>
+                        <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a>
+                        <br>
                     @endforeach
                     Рубрики:
                     @foreach($book->headings as $heading)
@@ -25,13 +27,13 @@
                     @endforeach
                 </div>
             </div>
-    @endforeach
+        @endforeach
     </div>
 
 @endsection
 
 @section ('headings')
-    <!-- Categories Widget -->
+    <!-- Heading Widget -->
     <div class="card my-4">
         <h5 class="card-header">Рубрики:</h5>
         <div class="card-body">
@@ -50,7 +52,7 @@
 @endsection
 
 @section ('autors')
-    <!-- Categories Widget -->
+    <!-- Autors Widget -->
     <div class="card my-4">
         <h5 class="card-header">Популярные авторы:</h5>
         <div class="card-body">

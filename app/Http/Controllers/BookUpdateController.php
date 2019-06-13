@@ -10,7 +10,7 @@ class BookUpdateController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
@@ -32,8 +32,7 @@ class BookUpdateController extends Controller
             }
             $book->save();
 
-        } else
-        {
+        } else {
             $book = Book::find($request->get('id'));
         }
         return view('admin.book-update', ['book' => $book]);

@@ -14,10 +14,11 @@
                     <a href="{{route('single_book', $book->id)}}" class="btn btn-primary">Подробнее о книге &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">
-                    Создан: {{$book->created_at}}  <br>
+                    Создан: {{$book->created_at}} <br>
                     Автор:
                     @foreach($book->autors as $autor)
-                        <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a><br>
+                        <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a>
+                        <br>
                     @endforeach
                     Рубрики:
                     @foreach($book->headings as $heading)
@@ -25,7 +26,7 @@
                     @endforeach
                 </div>
             </div>
-    @endforeach
+        @endforeach
     </div>
 
 @endsection
@@ -72,7 +73,7 @@
     <!-- Advertising Widget -->
     <div class="card my-4">
         <h5 class="card-header">Рекламный блок</h5>
-        <div class="card-body" >
+        <div class="card-body">
             <strong style="color:#ff0000"> Покупайте наших слонов </strong>
         </div>
     </div>

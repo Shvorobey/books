@@ -5,23 +5,24 @@
     <div class="col-md-8">
         <h1 class="my-4" style="color:#0000CD">{{$book->title}}</h1>
         <!-- Blog Post -->
-            <div class="card mb-4">
-                <img class="card-img-top" src="{{$book->img}}" alt="Card image cap">
-                <div class="card-body">
-                    <h2 class="card-title" style="color:#ff0000">{{$book->title}}</h2>
-                </div>
-                <div class="card-footer text-muted">
-                    Создан: {{$book->created_at}}  <br>
-                    Автор:
-                    @foreach($book->autors as $autor)
-                        <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a><br>
-                    @endforeach
-                    Рубрики:
-                    @foreach($book->headings as $heading)
-                        <a href="{{route('books_by_heading', $heading->key)}}">{{$heading->title}}   </a>
-                    @endforeach
-                </div>
+        <div class="card mb-4">
+            <img class="card-img-top" src="{{$book->img}}" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title" style="color:#ff0000">{{$book->title}}</h2>
             </div>
+            <div class="card-footer text-muted">
+                Создан: {{$book->created_at}} <br>
+                Автор:
+                @foreach($book->autors as $autor)
+                    <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a>
+                    <br>
+                @endforeach
+                Рубрики:
+                @foreach($book->headings as $heading)
+                    <a href="{{route('books_by_heading', $heading->key)}}">{{$heading->title}}   </a>
+                @endforeach
+            </div>
+        </div>
     </div>
 @endsection
 

@@ -16,23 +16,24 @@
 
                         Вы вошли под именем: {{\Auth::user()->name}} <br>
                         <ol>
-                            <li> <a class="nav-link" style="color:red" href="{{route('book-new')}}">Добавить книгу
-                                    <span class="sr-only">(current)</span> </li>
-                               <li> <a class="nav-link" style="color:red" href="{{route('books-list')}}">Редактировать или удалить
+                            <li><a class="nav-link" style="color:red" href="{{route('book-new')}}">Добавить книгу
+                                    <span class="sr-only">(current)</span></li>
+                            <li><a class="nav-link" style="color:red" href="{{route('books-list')}}">Редактировать или
+                                    удалить
                                     книгу
                                     <span class="sr-only">(current)</span></li>
-                            <li> <a class="nav-link" style="color:red" href="{{route('autor-new')}}">Добавить автора
-                                        <span class="sr-only">(current)</span></li>
-                                        <li><a class="nav-link" style="color:red" href="{{route('autors-list')}}">Редактировать или
-                                            удалить автора
-                                            <span class="sr-only">(current)</span></li>
-                                            <li><a class="nav-link" style="color:red" href="{{route('heading-new')}}">Добавить
-                                                раздел
-                                                <span class="sr-only">(current)</span></li>
-                                                <li><a class="nav-link" style="color:red" href="{{route('headings-list')}}">
-                                                    Редактировать или удалить раздел
-                                                    <span class="sr-only">(current)</span></li>
-                                                </ol>
+                            <li><a class="nav-link" style="color:red" href="{{route('autor-new')}}">Добавить автора
+                                    <span class="sr-only">(current)</span></li>
+                            <li><a class="nav-link" style="color:red" href="{{route('autors-list')}}">Редактировать или
+                                    удалить автора
+                                    <span class="sr-only">(current)</span></li>
+                            <li><a class="nav-link" style="color:red" href="{{route('heading-new')}}">Добавить
+                                    раздел
+                                    <span class="sr-only">(current)</span></li>
+                            <li><a class="nav-link" style="color:red" href="{{route('headings-list')}}">
+                                    Редактировать или удалить раздел
+                                    <span class="sr-only">(current)</span></li>
+                        </ol>
 
                     </div>
                 </div>

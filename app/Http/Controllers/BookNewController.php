@@ -18,7 +18,7 @@ class BookNewController extends Controller
     {
         if ($request->method() == 'POST') {
             $this->validate($request, [
-                'title' => 'required | max: 150 | string ',
+                'title' => 'required | max: 100 | string ',
                 'image' => ' image | dimensions: min_width=370, min_height=330 |  file',
             ]);
 

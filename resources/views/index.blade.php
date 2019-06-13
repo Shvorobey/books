@@ -20,12 +20,13 @@
                     Книга размещениа в каталоге: {{$book->created_at}} <br>
                     Автор:
                     @foreach($book->autors as $autor)
-                    <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a> ,
+                        <a href="{{route('books_by_autor', $autor->key)}}">{{$autor->first_name}} {{$autor->last_name}}</a>
+                        ,
                     @endforeach
                     <br>
                     Рубрики:
                     @foreach($book->headings as $heading)
-                        <a href="{{route('books_by_heading', $heading->key)}}">{{$heading->title}},   </a>
+                        <a href="{{route('books_by_heading', $heading->key)}}">{{$heading->title}}, </a>
                     @endforeach
                 </div>
             </div>
