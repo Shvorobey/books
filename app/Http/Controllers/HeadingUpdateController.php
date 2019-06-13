@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Heading;
 use Illuminate\Http\Request;
 
 class HeadingUpdateController extends Controller
@@ -14,6 +15,22 @@ class HeadingUpdateController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        if ($request->method() == 'POST') {
+            $this->validate($request, [
+                'title' => 'required | max: 30 | string ',
+                'key'=> 'required | max: 50 | min: 2| string'
+            ]);
+
+            $heading = Heading::find($request->input('id'));
+            $heading->title = $request->input('title');
+            $heading->key = $request->input('key');
+
+            $heading->save();
+
+        } else
+        {
+            $heading = Heading::find($request->get('id'));
+        }
+        return view('admin.heading-update', ['heading' => $heading]);
     }
 }

@@ -34,6 +34,6 @@ class BookNewController extends Controller
             $book->save();
         }
 
-        return view('admin/book-new', ['headings' => Heading::all()]);
+        return view('admin/book-new');
     }
 }
