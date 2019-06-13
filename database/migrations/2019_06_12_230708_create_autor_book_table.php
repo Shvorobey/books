@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHeadingsTable extends Migration
+class CreateAutorBookTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateHeadingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('headings', function (Blueprint $table) {
+        Schema::create('autor_book', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('key');
+            $table->unsignedInteger('autor_id');
+            $table->unsignedInteger('book_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateHeadingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('headings');
+        Schema::dropIfExists('autor_book');
     }
 }

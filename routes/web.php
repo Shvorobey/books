@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','\\' . \App\Http\Controllers\IndexController::class)->name('main');
+
+Route::get('/autor/{key}','\\' . \App\Http\Controllers\BooksByAutorController::class)->name('books_by_autor');
+
+Route::get('/heading/{key}','\\' . \App\Http\Controllers\BooksByHeadingController::class)->name('books_by_heading');
