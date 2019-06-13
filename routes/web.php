@@ -25,6 +25,33 @@ Route::get('/contact', 'ShowPagesController@contact')->name('contact');
 
 Route::get('/locator', function () { return view('locator');})->name('locator');
 
+//Admin - Book
+Route::match(['get'], '/admin/books', '\\' . \App\Http\Controllers\BookListController::class)->name('books-list');
+
+Route::match(['get', 'post'], '/admin/book/new', '\\' . \App\Http\Controllers\BookNewController::class)->name('book-new');
+
+Route::match(['delete'], '/admin/book-delete', '\\' . \App\Http\Controllers\BookDeliteController::class)->name('books-delite');
+
+Route::match(['get', 'post'], '/admin/book/update/{id?}', '\\' . \App\Http\Controllers\BookUpdateController::class)->name('book-update');
+
+//Admin - Autor
+Route::match(['get'], '/admin/autors', '\\' . \App\Http\Controllers\AutorListController::class)->name('autors-list');
+
+Route::match(['get', 'post'], '/admin/autor/new', '\\' . \App\Http\Controllers\AutorNewController::class)->name('autor-new');
+
+Route::match(['delete'], '/admin/autor-delete', '\\' . \App\Http\Controllers\AutorDeleteController::class)->name('form-autors-list');
+
+Route::match(['get', 'post'], '/admin/autor/update/{id?}', '\\' . \App\Http\Controllers\AutorUpdateController::class)->name('autor-update');
+
+//Admin - Heading
+Route::match(['get'], '/admin/heading', '\\' . \App\Http\Controllers\HeadingListController::class)->name('headings-list');
+
+Route::match(['get', 'post'], '/admin/heading/new', '\\' . \App\Http\Controllers\AutorNewController::class)->name('heading-new');
+
+Route::match(['delete'], '/admin/heading-delete', '\\' . \App\Http\Controllers\HeadingDeleteController::class)->name('form-headings-list');
+
+Route::match(['get', 'post'], '/admin/heading/update/{id?}', '\\' . \App\Http\Controllers\HeadingUpdateController::class)->name('heading-update');
+
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
