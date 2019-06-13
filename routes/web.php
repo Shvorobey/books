@@ -46,7 +46,7 @@ Route::match(['get', 'post'], '/admin/autor/update/{id?}', '\\' . \App\Http\Cont
 //Admin - Heading
 Route::match(['get'], '/admin/heading', '\\' . \App\Http\Controllers\HeadingListController::class)->name('headings-list');
 
-Route::match(['get', 'post'], '/admin/heading/new', '\\' . \App\Http\Controllers\AutorNewController::class)->name('heading-new');
+Route::match(['get', 'post'], '/admin/heading/new', '\\' . \App\Http\Controllers\HeadingNewController::class)->name('heading-new');
 
 Route::match(['delete'], '/admin/heading-delete', '\\' . \App\Http\Controllers\HeadingDeleteController::class)->name('form-headings-list');
 

@@ -21,12 +21,12 @@
                                <li> <a class="nav-link" style="color:red" href="{{route('books-list')}}">Редактировать или удалить
                                     книгу
                                     <span class="sr-only">(current)</span></li>
-                            <li> <a class="nav-link" style="color:red" href="{{route('main')}}">Добавить автора
+                            <li> <a class="nav-link" style="color:red" href="{{route('autor-new')}}">Добавить автора
                                         <span class="sr-only">(current)</span></li>
                                         <li><a class="nav-link" style="color:red" href="{{route('autors-list')}}">Редактировать или
                                             удалить автора
                                             <span class="sr-only">(current)</span></li>
-                                            <li><a class="nav-link" style="color:red" href="{{route('main')}}">Добавить
+                                            <li><a class="nav-link" style="color:red" href="{{route('heading-new')}}">Добавить
                                                 раздел
                                                 <span class="sr-only">(current)</span></li>
                                                 <li><a class="nav-link" style="color:red" href="{{route('headings-list')}}">
